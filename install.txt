@@ -1,0 +1,35 @@
+ng new SampleProject --style=scss
+
+
+1)
+Rederect one compoenent to another component
+https://medium.com/dailyjs/3-ways-to-communicate-between-angular-components-a1e3f3304ecb
+
+create a common service and decelier
+decvariable : boolean=false;
+
+add function any component html file
+<div (click)="functionName()"></div>
+
+add class any component html file
+<div [class.ClassName]="commonService.minisidebar">test</div>
+
+on this component ts file
+
+import { CommonService } from '../services/common.service';
+constractor(public InitializeCommonServece:CommonService){
+}
+public functionName(){ this.InitializeCommonServece.decvariable = !this.InitializeCommonServece.decvariable; }
+
+
+
+
+
+2)
+On click add class
+<div>(click)="functionName()" [class.ClassName]="variableName"</div>
+public variableName : boolean=false;
+
+public functionName() {
+    this.variableName = !this.variableName;
+}

@@ -1,0 +1,4 @@
+https://scotch.io/tutorials/using-sass-with-the-angular-cli
+
+
+npm install jquery@1.9.1 --save
